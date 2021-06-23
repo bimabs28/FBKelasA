@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button tambahBtn, lihatBtn;
+    Button tambahBtn,lihatBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +25,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         lihatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(LihatTeman.getActIntent(MainActivity.this));
             }
         });
-
-
     }
 }
